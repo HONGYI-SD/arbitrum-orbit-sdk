@@ -1,6 +1,6 @@
 import { Chain, createPublicClient, http, defineChain } from 'viem';
 import { privateKeyToAccount } from 'viem/accounts';
-import { arbitrumSepolia } from 'viem/chains';
+import { sepolia } from 'viem/chains';
 import {
   createTokenBridgePrepareSetWethGatewayTransactionReceipt,
   createTokenBridgePrepareSetWethGatewayTransactionRequest,
@@ -32,7 +32,7 @@ if (typeof process.env.ORBIT_CHAIN_RPC === 'undefined') {
 }
 
 // set the parent chain and create a public client for it
-const parentChain = arbitrumSepolia;
+const parentChain = sepolia;
 const parentChainPublicClient = createPublicClient({ chain: parentChain, transport: http() });
 
 // define chain config for the orbit chain

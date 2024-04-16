@@ -1,6 +1,6 @@
 import { writeFile } from 'fs/promises';
 import { Chain, createPublicClient, http } from 'viem';
-import { arbitrumSepolia } from 'viem/chains';
+import { sepolia } from 'viem/chains';
 import {
   ChainConfig,
   createRollupPrepareTransaction,
@@ -27,7 +27,7 @@ if (typeof process.env.VALIDATOR_PRIVATE_KEY === 'undefined') {
 }
 
 // set the parent chain and create a public client for it
-const parentChain = arbitrumSepolia;
+const parentChain = sepolia;
 const parentChainPublicClient = createPublicClient({
   chain: parentChain,
   transport: http(),

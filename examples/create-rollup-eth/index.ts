@@ -1,6 +1,6 @@
 import { createPublicClient, http } from 'viem';
 import { generatePrivateKey, privateKeyToAccount } from 'viem/accounts';
-import { arbitrumSepolia } from 'viem/chains';
+import { sepolia } from 'viem/chains';
 import { createRollupPrepareConfig, prepareChainConfig, createRollup } from '@arbitrum/orbit-sdk';
 import { sanitizePrivateKey, generateChainId } from '@arbitrum/orbit-sdk/utils';
 import { config } from 'dotenv';
@@ -27,7 +27,7 @@ const validatorPrivateKey = withFallbackPrivateKey(process.env.VALIDATOR_PRIVATE
 const validator = privateKeyToAccount(validatorPrivateKey).address;
 
 // set the parent chain and create a public client for it
-const parentChain = arbitrumSepolia;
+const parentChain = sepolia;
 const parentChainPublicClient = createPublicClient({ chain: parentChain, transport: http() });
 
 // load the deployer account

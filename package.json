@@ -28,5 +28,9 @@
     "ts-morph": "^21.0.1",
     "typescript": "^5.2.2",
     "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "@arbitrum/orbit-sdk": "^0.10.0",
+    "viem": "^1.20.0"
   }
 }

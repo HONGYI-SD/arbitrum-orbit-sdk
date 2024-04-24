@@ -52,9 +52,10 @@ async function main() {
   // get the core contracts from the transaction receipt
   const coreContracts = txReceipt.getCoreContracts();
 
+  console.log(coreContracts)
   // prepare the node config
   const nodeConfig = prepareNodeConfig({
-    chainName: 'My Orbit Chain',
+    chainName: 'Domicon Orbit Chain',
     chainConfig,
     coreContracts,
     batchPosterPrivateKey: process.env.BATCH_POSTER_PRIVATE_KEY as `0x${string}`,

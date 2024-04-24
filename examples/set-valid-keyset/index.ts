@@ -26,8 +26,9 @@ async function main() {
   // prepare the transaction setting the keyset
   const txRequest = await setValidKeysetPrepareTransactionRequest({
     coreContracts: {
-      upgradeExecutor: '0x82c42d2cdcbe6b4482900e299b3532082e217132',
-      sequencerInbox: '0x42b5da0625cf278067955f07045f63cafd79274f',
+      //upgradeExecutor: '0x82c42d2cdcbe6b4482900e299b3532082e217132',
+      upgradeExecutor: '0xA5e5E61B4ccA8f5B397D17a5e35a049d017F6d75',
+      sequencerInbox: '0x4FeB7200e18E6C0Ff1C3be72a702DF1C9220CA19',
     },
     keyset,
     account: deployer.address,
